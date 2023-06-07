@@ -1,8 +1,9 @@
-import 'dart:math';
-
 import 'package:d_chart/d_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:pie_chart/pie_chart.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'constants.dart';
 
 import 'demo2.dart';
 
@@ -30,6 +31,738 @@ class Home extends StatelessWidget {
     Colors.amber,
   ];
 
+  ScrollController controller = ScrollController();
+  bool closeTopContainer = false;
+  double topContainer = 0;
+
+  List<Widget> itemsData = [
+    Container(
+        height: 150,
+        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20.0)), color: Colors.white, boxShadow: [
+          BoxShadow(color: Colors.black.withAlpha(100), blurRadius: 10.0),
+        ]),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "post[name]",
+                    style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "post[brand]",
+                    style: const TextStyle(fontSize: 17, color: Colors.grey),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    "\$ {post[price]}",
+                    style: const TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+              // Image.asset(
+              //   "assets/images/${post["image"]}",
+              //   height: double.infinity,
+              // )
+            ],
+          ),
+        )),
+    Container(
+        height: 150,
+        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20.0)), color: Colors.white, boxShadow: [
+          BoxShadow(color: Colors.black.withAlpha(100), blurRadius: 10.0),
+        ]),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "post[name]",
+                    style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "post[brand]",
+                    style: const TextStyle(fontSize: 17, color: Colors.grey),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    "\$ {post[price]}",
+                    style: const TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+              // Image.asset(
+              //   "assets/images/${post["image"]}",
+              //   height: double.infinity,
+              // )
+            ],
+          ),
+        )),
+    Container(
+        height: 150,
+        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20.0)), color: Colors.white, boxShadow: [
+          BoxShadow(color: Colors.black.withAlpha(100), blurRadius: 10.0),
+        ]),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "post[name]",
+                    style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "post[brand]",
+                    style: const TextStyle(fontSize: 17, color: Colors.grey),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    "\$ {post[price]}",
+                    style: const TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+              // Image.asset(
+              //   "assets/images/${post["image"]}",
+              //   height: double.infinity,
+              // )
+            ],
+          ),
+        )),
+    Container(
+        height: 150,
+        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20.0)), color: Colors.white, boxShadow: [
+          BoxShadow(color: Colors.black.withAlpha(100), blurRadius: 10.0),
+        ]),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "post[name]",
+                    style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "post[brand]",
+                    style: const TextStyle(fontSize: 17, color: Colors.grey),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    "\$ {post[price]}",
+                    style: const TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+              // Image.asset(
+              //   "assets/images/${post["image"]}",
+              //   height: double.infinity,
+              // )
+            ],
+          ),
+        )),
+    Container(
+        height: 150,
+        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20.0)), color: Colors.white, boxShadow: [
+          BoxShadow(color: Colors.black.withAlpha(100), blurRadius: 10.0),
+        ]),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "post[name]",
+                    style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "post[brand]",
+                    style: const TextStyle(fontSize: 17, color: Colors.grey),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    "\$ {post[price]}",
+                    style: const TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+              // Image.asset(
+              //   "assets/images/${post["image"]}",
+              //   height: double.infinity,
+              // )
+            ],
+          ),
+        )),
+    Container(
+        height: 150,
+        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20.0)), color: Colors.white, boxShadow: [
+          BoxShadow(color: Colors.black.withAlpha(100), blurRadius: 10.0),
+        ]),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "post[name]",
+                    style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "post[brand]",
+                    style: const TextStyle(fontSize: 17, color: Colors.grey),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    "\$ {post[price]}",
+                    style: const TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+              // Image.asset(
+              //   "assets/images/${post["image"]}",
+              //   height: double.infinity,
+              // )
+            ],
+          ),
+        )),
+    Container(
+        height: 150,
+        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20.0)), color: Colors.white, boxShadow: [
+          BoxShadow(color: Colors.black.withAlpha(100), blurRadius: 10.0),
+        ]),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "post[name]",
+                    style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "post[brand]",
+                    style: const TextStyle(fontSize: 17, color: Colors.grey),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    "\$ {post[price]}",
+                    style: const TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+              // Image.asset(
+              //   "assets/images/${post["image"]}",
+              //   height: double.infinity,
+              // )
+            ],
+          ),
+        )),
+    Container(
+        height: 150,
+        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20.0)), color: Colors.white, boxShadow: [
+          BoxShadow(color: Colors.black.withAlpha(100), blurRadius: 10.0),
+        ]),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "post[name]",
+                    style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "post[brand]",
+                    style: const TextStyle(fontSize: 17, color: Colors.grey),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    "\$ {post[price]}",
+                    style: const TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+              // Image.asset(
+              //   "assets/images/${post["image"]}",
+              //   height: double.infinity,
+              // )
+            ],
+          ),
+        )),
+    Container(
+        height: 150,
+        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20.0)), color: Colors.white, boxShadow: [
+          BoxShadow(color: Colors.black.withAlpha(100), blurRadius: 10.0),
+        ]),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "post[name]",
+                    style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "post[brand]",
+                    style: const TextStyle(fontSize: 17, color: Colors.grey),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    "\$ {post[price]}",
+                    style: const TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+              // Image.asset(
+              //   "assets/images/${post["image"]}",
+              //   height: double.infinity,
+              // )
+            ],
+          ),
+        )),
+    Container(
+        height: 150,
+        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20.0)), color: Colors.white, boxShadow: [
+          BoxShadow(color: Colors.black.withAlpha(100), blurRadius: 10.0),
+        ]),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "post[name]",
+                    style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "post[brand]",
+                    style: const TextStyle(fontSize: 17, color: Colors.grey),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    "\$ {post[price]}",
+                    style: const TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+              // Image.asset(
+              //   "assets/images/${post["image"]}",
+              //   height: double.infinity,
+              // )
+            ],
+          ),
+        )),
+    Container(
+        height: 150,
+        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20.0)), color: Colors.white, boxShadow: [
+          BoxShadow(color: Colors.black.withAlpha(100), blurRadius: 10.0),
+        ]),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "post[name]",
+                    style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "post[brand]",
+                    style: const TextStyle(fontSize: 17, color: Colors.grey),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    "\$ {post[price]}",
+                    style: const TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+              // Image.asset(
+              //   "assets/images/${post["image"]}",
+              //   height: double.infinity,
+              // )
+            ],
+          ),
+        )),
+    Container(
+        height: 150,
+        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20.0)), color: Colors.white, boxShadow: [
+          BoxShadow(color: Colors.black.withAlpha(100), blurRadius: 10.0),
+        ]),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "post[name]",
+                    style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "post[brand]",
+                    style: const TextStyle(fontSize: 17, color: Colors.grey),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    "\$ {post[price]}",
+                    style: const TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+              // Image.asset(
+              //   "assets/images/${post["image"]}",
+              //   height: double.infinity,
+              // )
+            ],
+          ),
+        )),
+    Container(
+        height: 150,
+        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20.0)), color: Colors.white, boxShadow: [
+          BoxShadow(color: Colors.black.withAlpha(100), blurRadius: 10.0),
+        ]),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "post[name]",
+                    style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "post[brand]",
+                    style: const TextStyle(fontSize: 17, color: Colors.grey),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    "\$ {post[price]}",
+                    style: const TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+              // Image.asset(
+              //   "assets/images/${post["image"]}",
+              //   height: double.infinity,
+              // )
+            ],
+          ),
+        )),
+    Container(
+        height: 150,
+        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20.0)), color: Colors.white, boxShadow: [
+          BoxShadow(color: Colors.black.withAlpha(100), blurRadius: 10.0),
+        ]),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "post[name]",
+                    style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "post[brand]",
+                    style: const TextStyle(fontSize: 17, color: Colors.grey),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    "\$ {post[price]}",
+                    style: const TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+              // Image.asset(
+              //   "assets/images/${post["image"]}",
+              //   height: double.infinity,
+              // )
+            ],
+          ),
+        )),
+    Container(
+        height: 150,
+        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20.0)), color: Colors.white, boxShadow: [
+          BoxShadow(color: Colors.black.withAlpha(100), blurRadius: 10.0),
+        ]),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "post[name]",
+                    style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "post[brand]",
+                    style: const TextStyle(fontSize: 17, color: Colors.grey),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    "\$ {post[price]}",
+                    style: const TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+              // Image.asset(
+              //   "assets/images/${post["image"]}",
+              //   height: double.infinity,
+              // )
+            ],
+          ),
+        )),
+    Container(
+        height: 150,
+        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20.0)), color: Colors.white, boxShadow: [
+          BoxShadow(color: Colors.black.withAlpha(100), blurRadius: 10.0),
+        ]),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "post[name]",
+                    style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "post[brand]",
+                    style: const TextStyle(fontSize: 17, color: Colors.grey),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    "\$ {post[price]}",
+                    style: const TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+              // Image.asset(
+              //   "assets/images/${post["image"]}",
+              //   height: double.infinity,
+              // )
+            ],
+          ),
+        )),
+    Container(
+        height: 150,
+        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20.0)), color: Colors.white, boxShadow: [
+          BoxShadow(color: Colors.black.withAlpha(100), blurRadius: 10.0),
+        ]),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "post[name]",
+                    style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "post[brand]",
+                    style: const TextStyle(fontSize: 17, color: Colors.grey),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    "\$ {post[price]}",
+                    style: const TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+              // Image.asset(
+              //   "assets/images/${post["image"]}",
+              //   height: double.infinity,
+              // )
+            ],
+          ),
+        )),
+    Container(
+        height: 150,
+        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20.0)), color: Colors.white, boxShadow: [
+          BoxShadow(color: Colors.black.withAlpha(100), blurRadius: 10.0),
+        ]),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "post[name]",
+                    style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "post[brand]",
+                    style: const TextStyle(fontSize: 17, color: Colors.grey),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    "\$ {post[price]}",
+                    style: const TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+              // Image.asset(
+              //   "assets/images/${post["image"]}",
+              //   height: double.infinity,
+              // )
+            ],
+          ),
+        )),
+    Container(
+        height: 150,
+        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20.0)), color: Colors.white, boxShadow: [
+          BoxShadow(color: Colors.black.withAlpha(100), blurRadius: 10.0),
+        ]),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "post[name]",
+                    style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "post[brand]",
+                    style: const TextStyle(fontSize: 17, color: Colors.grey),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    "\$ {post[price]}",
+                    style: const TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+              // Image.asset(
+              //   "assets/images/${post["image"]}",
+              //   height: double.infinity,
+              // )
+            ],
+          ),
+        )),
+
+
+  ];
+  // final CategoriesScroller categoriesScroller = CategoriesScroller();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +771,47 @@ class Home extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Padding(
+            AnimatedOpacity(
+              duration: const Duration(milliseconds: 200),
+              opacity: closeTopContainer?0:1,
+              child: AnimatedContainer(
+                  duration: const Duration(milliseconds: 200),
+                  width: double.infinity,
+                  alignment: Alignment.topCenter,
+                  // height: closeTopContainer?0:categoryHeight,
+                  // child: categoriesScroller
+              ),
+            ),
+            Container(
+              height: 500,
+              child: ListView.builder(
+                  controller: controller,
+                  itemCount: itemsData.length,
+                  physics: BouncingScrollPhysics(),
+                  itemBuilder: (context, index) {
+                    double scale = 1.0;
+                    if (topContainer > 0.5) {
+                      scale = index + 0.5 - topContainer;
+                      if (scale < 0) {
+                        scale = 0;
+                      } else if (scale > 1) {
+                        scale = 1;
+                      }
+                    }
+                    return Opacity(
+                      opacity: scale,
+                      child: Transform(
+                        transform: Matrix4.identity()..scale(scale, scale),
+                        alignment: Alignment.bottomCenter,
+                        child: Align(
+                            heightFactor: 0.7,
+                            alignment: Alignment.topCenter,
+                            child: itemsData[index]),
+                      ),
+                    );
+                  }),
+            ),
+            /*Padding(
               padding: EdgeInsets.all(16),
               child: AspectRatio(
                 aspectRatio: 12 / 7,
@@ -112,7 +885,7 @@ class Home extends StatelessWidget {
                 totalValue: 20,
               ),
             ),
-            const SizedBox(height: 50),
+            const SizedBox(height: 50),*/
           ],
         ),
       ),
